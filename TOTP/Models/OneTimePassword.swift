@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import FaviconFinder
 
 class OneTimePassword: ObservableObject, Codable, Identifiable {
     var id = UUID()
@@ -23,12 +22,6 @@ class OneTimePassword: ObservableObject, Codable, Identifiable {
         TOTP(secret: secret.base32DecodedData!, digits: digits, timeInterval: timeInterval, algorithm: algorithm)!
     }
     
-    func getIcon(website: URL) async throws -> UIImage {
-        let favicon = try await FaviconFinder(url: website).downloadFavicon()
-        
-        print("URL of Favicon: \(favicon.url)")
-        return favicon.image
-    }
     
     init(secret: String, accountName: String) {
         self.secret = secret
