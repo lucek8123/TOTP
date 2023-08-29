@@ -56,6 +56,14 @@ struct SimpleIcon: Decodable {
     }
     
     static var icons: [SimpleIcon] {
-        Bundle.main.decode([SimpleIcon].self, from: "simple-icons.json")
+        guard let url = Bundle.main.url(forResource: "simple-icons.json", withExtension: nil) else {
+            fatalError("Failed to locate simple-icons.json in bundle.")
+        }
+        
+        do {
+            return try Bundle.main.decode([SimpleIcon].self, from: url)
+        } catch {
+            fatalError("Failed to decode simple-icons.json - that should not happen. \n \(error.localizedDescription)")
+        }
     }
 }

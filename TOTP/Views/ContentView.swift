@@ -12,13 +12,12 @@ struct ContentView: View {
     @StateObject var otpManager = OTPManager.shared
     @Environment(\.dismiss) var dismiss
     
-    @State private var settingsSheetShowing = false
+    @State private var acknowledgementsSheetShowing = false
     @State private var addSheetShowing = false
     
     @State private var accountName = ""
-    @State private var url = ""
+    @State private var url: String?
     
-    @State private var addSelectionShowing = false
     @State private var qrSheetShowing = false
     
     var body: some View {
@@ -36,9 +35,9 @@ struct ContentView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button {
-                        settingsSheetShowing = true
+                        acknowledgementsSheetShowing = true
                     } label: {
-                        Label("Settings", systemImage: "gear")
+                        Label("Acknowledgements", systemImage: "text.book.closed")
                     }
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -49,7 +48,7 @@ struct ContentView: View {
                             Label("I have qr code", systemImage: "qrcode")
                         }
                         Button {
-                            addSheetShowing = true
+                            url = ""
                         } label: {
                             Label("I have secret or URL", systemImage: "key.fill")
                         }
@@ -58,80 +57,24 @@ struct ContentView: View {
                     }
                 }
             }
-            
-            .sheet(isPresented: $addSheetShowing) {
+            .sheet(item: $url) {
                 accountName = ""
-                url = ""
-            } content: {
-                AddView(secret: $url, accountName: $accountName)
+            } content: { url in
+                AddView(url: url, accountName: accountName)
             }
-            .sheet(isPresented: $settingsSheetShowing) {
-                SettingsView()
+            .sheet(isPresented: $acknowledgementsSheetShowing) {
+                AcknowledgementsView()
             }
             .sheet(isPresented: $qrSheetShowing) {
-                ZStack {
-                    CodeScannerView(codeTypes: [.qr], showViewfinder: true, shouldVibrateOnSuccess: true) { result in
-                        // more code to come
-                        switch result {
-                        case .success(let otp):
-                            // Get accout name
-                            accountName = getAccountName(otp.string)
-                            url = URL(string: otp.string)?.absoluteString ?? ""
-                            print(url)
-                            withAnimation(.easeOut) {
-                                qrSheetShowing = false
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                                    addSheetShowing = true
-                                }
-                            }
-                            
-                        case .failure(let error):
-                            print("Error \(error)")
-                        }
-                    }
-                    
-                    VStack {
-                        HStack {
-                            Spacer()
-                            Button {
-                                qrSheetShowing = false
-                            } label: {
-                                Image(systemName: "xmark.circle")
-                                    .resizable()
-                                    .frame(width: 32, height: 32)
-                                    .foregroundColor(.primary)
-                                    .padding(5)
-                                    .background(.thinMaterial)
-                                    .clipShape(Circle())
-                                    .padding()
-                                    .accessibilityLabel("Close adding by qr")
-                            }
-                        }
-                        Spacer()
-                        Text("Scan QR Code")
-                            .padding(5)
-                            .background(.yellow)
-                            .clipShape(RoundedRectangle(cornerRadius: 5, style: .circular))
-                            .foregroundColor(.black)
-                            .padding()
-                            .font(.title3.bold())
-                    }
-                }
+                QRCodeScannerView(accountName: $accountName, url: $url)
             }
         }
-    }
-    
-    func getAccountName(_ str: String) -> String {
-        guard let components = URLComponents(string: str) else {
-            return ""
-        }
-        
-        guard let issuerFromURL = components.queryItems?.first(where: { $0.name == "issuer" })?.value else {
-            return ""
-        }
-        
-        return issuerFromURL
     }
 }
 
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
 

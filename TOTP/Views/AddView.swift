@@ -12,8 +12,8 @@ import SVGView
 struct AddView: View {
     @Environment(\.dismiss) var dismiss
     
-    @Binding var secret: String
-    @Binding var accountName: String
+    @State private var secret: String = ""
+    @State private  var accountName: String = ""
     
     @State private var digits = 6
     @State private var timeInterval = 30
@@ -42,7 +42,8 @@ struct AddView: View {
                     HStack {
                         Text("Select Icon")
                         Spacer()
-                        iconView
+                        icon?.image
+                            .fill(color: icon?.iconColor ?? .black)
                             .frame(width: 32, height: 32)
                     }
                     .onTapGesture {
@@ -79,19 +80,6 @@ struct AddView: View {
                 IconSelectView(icon: $icon)
             }
         }
-    }
-    
-    var iconView: SVGView? {
-        guard let slug = icon?.slug else {
-            return nil
-        }
-        
-        guard let url = Bundle.main.url(forResource: slug, withExtension: "svg", subdirectory: "icons") else {
-            fatalError("Failed to load icon \(slug).svg")
-        }
-        
-        return SVGView(contentsOf: url)
-            .fill(color: icon?.iconColor ?? .black)
     }
     
     func getSecret() -> String? {
@@ -178,6 +166,11 @@ struct AddView: View {
         OTPManager.shared.add(otp)
         OTPManager.shared.save()
         dismiss()
+    }
+    
+    init(url: String = "", accountName: String = "") {
+        self.secret = url
+        self.accountName = accountName
     }
 }
 

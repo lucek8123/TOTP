@@ -37,7 +37,8 @@ struct EditView: View {
                         HStack {
                             Text("Select Icon")
                             Spacer()
-                            iconView
+                            icon?.image
+                                .fill(color: icon?.iconColor ?? .black)
                                 .frame(width: 32, height: 32)
                         }
                         .onTapGesture {
@@ -67,19 +68,6 @@ struct EditView: View {
                 }
             }
         }
-    }
-    
-    var iconView: SVGView? {
-        guard let slug = icon?.slug else {
-            return nil
-        }
-        
-        guard let url = Bundle.main.url(forResource: slug, withExtension: "svg", subdirectory: "icons") else {
-            fatalError("Failed to load icon \(slug).svg")
-        }
-        
-        return SVGView(contentsOf: url)
-            .fill(color: icon?.iconColor ?? .black)
     }
     
     

@@ -55,7 +55,7 @@ struct OTPDetailView: View {
                 .clipShape(RoundedRectangle(cornerRadius: 10))
                 .overlay(
                     RoundedRectangle(cornerRadius: 10)
-                        .stroke(.lightBackground)
+                        .stroke(.codeStroke)
                 )
                 .padding()
                 .onTapGesture {
@@ -90,7 +90,6 @@ struct OTPDetailView: View {
                     }
                     
                     Button(role: .destructive) {
-                        // more code to come
                         deleteConfirmationShowed = true
                     } label: {
                         HStack {

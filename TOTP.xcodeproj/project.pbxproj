@@ -11,15 +11,12 @@
 		233EB5B92A8AC1B4006AD9A8 /* SVGView in Frameworks */ = {isa = PBXBuildFile; productRef = 233EB5B82A8AC1B4006AD9A8 /* SVGView */; };
 		233EB5BB2A8B9FAB006AD9A8 /* SVGView - fill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233EB5BA2A8B9FAB006AD9A8 /* SVGView - fill.swift */; };
 		234C9ED22A92309600BEA671 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234C9ED12A92309600BEA671 /* Icon.swift */; };
-		234C9ED42A92341400BEA671 /* Color - Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234C9ED32A92341400BEA671 /* Color - Codable.swift */; };
-		234C9ED62A92368100BEA671 /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234C9ED52A92368100BEA671 /* IconView.swift */; };
 		238DECCC2A93D57200C16B09 /* simple-icons.json in Resources */ = {isa = PBXBuildFile; fileRef = 238DECCB2A93D57200C16B09 /* simple-icons.json */; };
 		2399F15B2A8A7AF500F04FD0 /* TOTPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2399F15A2A8A7AF500F04FD0 /* TOTPApp.swift */; };
 		2399F15D2A8A7AF500F04FD0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2399F15C2A8A7AF500F04FD0 /* ContentView.swift */; };
 		2399F15F2A8A7AF800F04FD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2399F15E2A8A7AF800F04FD0 /* Assets.xcassets */; };
 		2399F1622A8A7AF800F04FD0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2399F1612A8A7AF800F04FD0 /* Preview Assets.xcassets */; };
 		2399F1692A8A7B1600F04FD0 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2399F1682A8A7B1600F04FD0 /* EditView.swift */; };
-		2399F16B2A8A7B2200F04FD0 /* Color-Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2399F16A2A8A7B2200F04FD0 /* Color-Theme.swift */; };
 		2399F16D2A8A7B2700F04FD0 /* AdvancedSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2399F16C2A8A7B2700F04FD0 /* AdvancedSettingsView.swift */; };
 		2399F1702A8A7B3D00F04FD0 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2399F16F2A8A7B3D00F04FD0 /* AddView.swift */; };
 		2399F1722A8A7B5F00F04FD0 /* AcknowledgementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2399F1712A8A7B5F00F04FD0 /* AcknowledgementsView.swift */; };
@@ -27,12 +24,10 @@
 		2399F1782A8A7BA200F04FD0 /* OTPCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2399F1772A8A7BA200F04FD0 /* OTPCodeView.swift */; };
 		2399F17A2A8A7BAB00F04FD0 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2399F1792A8A7BAA00F04FD0 /* SettingsView.swift */; };
 		2399F17D2A8A7BC100F04FD0 /* OneTimePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2399F17C2A8A7BC100F04FD0 /* OneTimePassword.swift */; };
-		2399F17F2A8A7BC600F04FD0 /* OneTimePassword+Hashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2399F17E2A8A7BC600F04FD0 /* OneTimePassword+Hashable.swift */; };
 		2399F1812A8A7BCA00F04FD0 /* OTPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2399F1802A8A7BCA00F04FD0 /* OTPManager.swift */; };
-		2399F1842A8A7C0000F04FD0 /* CustomDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2399F1832A8A7C0000F04FD0 /* CustomDialog.swift */; };
 		2399F1862A8A7C0400F04FD0 /* FileManager - documentsDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2399F1852A8A7C0400F04FD0 /* FileManager - documentsDirectory.swift */; };
 		2399F1882A8A7C0B00F04FD0 /* InfoAlert .swift in Sources */ = {isa = PBXBuildFile; fileRef = 2399F1872A8A7C0B00F04FD0 /* InfoAlert .swift */; };
-		2399F18A2A8A7C1000F04FD0 /* loadDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2399F1892A8A7C1000F04FD0 /* loadDocument.swift */; };
+		2399F18A2A8A7C1000F04FD0 /* Bundle - decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2399F1892A8A7C1000F04FD0 /* Bundle - decode.swift */; };
 		2399F18C2A8A7C1500F04FD0 /* ThinGauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2399F18B2A8A7C1500F04FD0 /* ThinGauge.swift */; };
 		2399F1902A8A7C6300F04FD0 /* Data+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2399F18F2A8A7C6300F04FD0 /* Data+Utilities.swift */; };
 		2399F1922A8A7C6700F04FD0 /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2399F1912A8A7C6700F04FD0 /* Generator.swift */; };
@@ -46,15 +41,17 @@
 		2399F1A52A8A7CD800F04FD0 /* FaviconFinder in Frameworks */ = {isa = PBXBuildFile; productRef = 2399F1A42A8A7CD800F04FD0 /* FaviconFinder */; };
 		2399F1AC2A8A7E6C00F04FD0 /* IconSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2399F1AB2A8A7E6C00F04FD0 /* IconSelectView.swift */; };
 		2399F1AE2A8A7FA200F04FD0 /* SimpleIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2399F1AD2A8A7FA200F04FD0 /* SimpleIcon.swift */; };
-		2399F1B02A8A834800F04FD0 /* Color - hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2399F1AF2A8A834800F04FD0 /* Color - hex.swift */; };
+		2399F1B02A8A834800F04FD0 /* SVGColor - Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2399F1AF2A8A834800F04FD0 /* SVGColor - Colors.swift */; };
+		23AF7E102A94E3C300EFC8BB /* Color - codeStroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AF7E0F2A94E3C300EFC8BB /* Color - codeStroke.swift */; };
+		23AF7E122A95314F00EFC8BB /* QRCodeScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AF7E112A95314F00EFC8BB /* QRCodeScannerView.swift */; };
+		23AF7E142A95338B00EFC8BB /* String - Identifable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AF7E132A95338B00EFC8BB /* String - Identifable.swift */; };
+		23EA85E12A99070900997CEC /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EA85E02A99070900997CEC /* SearchBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		233EB5B52A8AA7C9006AD9A8 /* icons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = icons; sourceTree = "<group>"; };
 		233EB5BA2A8B9FAB006AD9A8 /* SVGView - fill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SVGView - fill.swift"; sourceTree = "<group>"; };
 		234C9ED12A92309600BEA671 /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
-		234C9ED32A92341400BEA671 /* Color - Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color - Codable.swift"; sourceTree = "<group>"; };
-		234C9ED52A92368100BEA671 /* IconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
 		238DECCB2A93D57200C16B09 /* simple-icons.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "simple-icons.json"; sourceTree = "<group>"; };
 		2399F1572A8A7AF500F04FD0 /* TOTP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TOTP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2399F15A2A8A7AF500F04FD0 /* TOTPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOTPApp.swift; sourceTree = "<group>"; };
@@ -62,7 +59,6 @@
 		2399F15E2A8A7AF800F04FD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2399F1612A8A7AF800F04FD0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2399F1682A8A7B1600F04FD0 /* EditView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
-		2399F16A2A8A7B2200F04FD0 /* Color-Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color-Theme.swift"; sourceTree = "<group>"; };
 		2399F16C2A8A7B2700F04FD0 /* AdvancedSettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvancedSettingsView.swift; sourceTree = "<group>"; };
 		2399F16F2A8A7B3D00F04FD0 /* AddView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 		2399F1712A8A7B5F00F04FD0 /* AcknowledgementsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcknowledgementsView.swift; sourceTree = "<group>"; };
@@ -70,12 +66,10 @@
 		2399F1772A8A7BA200F04FD0 /* OTPCodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPCodeView.swift; sourceTree = "<group>"; };
 		2399F1792A8A7BAA00F04FD0 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		2399F17C2A8A7BC100F04FD0 /* OneTimePassword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneTimePassword.swift; sourceTree = "<group>"; };
-		2399F17E2A8A7BC600F04FD0 /* OneTimePassword+Hashable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OneTimePassword+Hashable.swift"; sourceTree = "<group>"; };
 		2399F1802A8A7BCA00F04FD0 /* OTPManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPManager.swift; sourceTree = "<group>"; };
-		2399F1832A8A7C0000F04FD0 /* CustomDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomDialog.swift; sourceTree = "<group>"; };
 		2399F1852A8A7C0400F04FD0 /* FileManager - documentsDirectory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FileManager - documentsDirectory.swift"; sourceTree = "<group>"; };
 		2399F1872A8A7C0B00F04FD0 /* InfoAlert .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "InfoAlert .swift"; sourceTree = "<group>"; };
-		2399F1892A8A7C1000F04FD0 /* loadDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loadDocument.swift; sourceTree = "<group>"; };
+		2399F1892A8A7C1000F04FD0 /* Bundle - decode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle - decode.swift"; sourceTree = "<group>"; };
 		2399F18B2A8A7C1500F04FD0 /* ThinGauge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThinGauge.swift; sourceTree = "<group>"; };
 		2399F18F2A8A7C6300F04FD0 /* Data+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+Utilities.swift"; sourceTree = "<group>"; };
 		2399F1912A8A7C6700F04FD0 /* Generator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Generator.swift; sourceTree = "<group>"; };
@@ -87,7 +81,11 @@
 		2399F19E2A8A7C8C00F04FD0 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		2399F1AB2A8A7E6C00F04FD0 /* IconSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconSelectView.swift; sourceTree = "<group>"; };
 		2399F1AD2A8A7FA200F04FD0 /* SimpleIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleIcon.swift; sourceTree = "<group>"; };
-		2399F1AF2A8A834800F04FD0 /* Color - hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color - hex.swift"; sourceTree = "<group>"; };
+		2399F1AF2A8A834800F04FD0 /* SVGColor - Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SVGColor - Colors.swift"; sourceTree = "<group>"; };
+		23AF7E0F2A94E3C300EFC8BB /* Color - codeStroke.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color - codeStroke.swift"; sourceTree = "<group>"; };
+		23AF7E112A95314F00EFC8BB /* QRCodeScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerView.swift; sourceTree = "<group>"; };
+		23AF7E132A95338B00EFC8BB /* String - Identifable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String - Identifable.swift"; sourceTree = "<group>"; };
+		23EA85E02A99070900997CEC /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,13 +131,13 @@
 			isa = PBXGroup;
 			children = (
 				2399F15A2A8A7AF500F04FD0 /* TOTPApp.swift */,
-				2399F18E2A8A7C4A00F04FD0 /* SwiftOTP */,
 				2399F16E2A8A7B2E00F04FD0 /* Views */,
 				2399F1822A8A7BDA00F04FD0 /* Extensions */,
 				2399F17B2A8A7BB700F04FD0 /* Models */,
 				2399F15E2A8A7AF800F04FD0 /* Assets.xcassets */,
 				233EB5B42A8AA7B7006AD9A8 /* simple-icons */,
 				2399F1602A8A7AF800F04FD0 /* Preview Content */,
+				2399F18E2A8A7C4A00F04FD0 /* SwiftOTP */,
 			);
 			path = TOTP;
 			sourceTree = "<group>";
@@ -158,9 +156,10 @@
 				2399F15C2A8A7AF500F04FD0 /* ContentView.swift */,
 				2399F1772A8A7BA200F04FD0 /* OTPCodeView.swift */,
 				2399F1732A8A7B7700F04FD0 /* OTPDetailView.swift */,
+				23AF7E112A95314F00EFC8BB /* QRCodeScannerView.swift */,
 				2399F1682A8A7B1600F04FD0 /* EditView.swift */,
 				2399F1AB2A8A7E6C00F04FD0 /* IconSelectView.swift */,
-				234C9ED52A92368100BEA671 /* IconView.swift */,
+				23EA85E02A99070900997CEC /* SearchBarView.swift */,
 				2399F16F2A8A7B3D00F04FD0 /* AddView.swift */,
 				2399F1792A8A7BAA00F04FD0 /* SettingsView.swift */,
 				2399F16C2A8A7B2700F04FD0 /* AdvancedSettingsView.swift */,
@@ -173,9 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				2399F17C2A8A7BC100F04FD0 /* OneTimePassword.swift */,
-				2399F17E2A8A7BC600F04FD0 /* OneTimePassword+Hashable.swift */,
 				2399F1802A8A7BCA00F04FD0 /* OTPManager.swift */,
-				2399F16A2A8A7B2200F04FD0 /* Color-Theme.swift */,
 				2399F1AD2A8A7FA200F04FD0 /* SimpleIcon.swift */,
 				234C9ED12A92309600BEA671 /* Icon.swift */,
 			);
@@ -185,14 +182,14 @@
 		2399F1822A8A7BDA00F04FD0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				2399F1832A8A7C0000F04FD0 /* CustomDialog.swift */,
 				2399F1852A8A7C0400F04FD0 /* FileManager - documentsDirectory.swift */,
-				2399F1872A8A7C0B00F04FD0 /* InfoAlert .swift */,
-				2399F1892A8A7C1000F04FD0 /* loadDocument.swift */,
-				2399F18B2A8A7C1500F04FD0 /* ThinGauge.swift */,
-				234C9ED32A92341400BEA671 /* Color - Codable.swift */,
-				2399F1AF2A8A834800F04FD0 /* Color - hex.swift */,
+				2399F1892A8A7C1000F04FD0 /* Bundle - decode.swift */,
+				2399F1AF2A8A834800F04FD0 /* SVGColor - Colors.swift */,
 				233EB5BA2A8B9FAB006AD9A8 /* SVGView - fill.swift */,
+				23AF7E0F2A94E3C300EFC8BB /* Color - codeStroke.swift */,
+				2399F1872A8A7C0B00F04FD0 /* InfoAlert .swift */,
+				2399F18B2A8A7C1500F04FD0 /* ThinGauge.swift */,
+				23AF7E132A95338B00EFC8BB /* String - Identifable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -303,14 +300,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2399F1812A8A7BCA00F04FD0 /* OTPManager.swift in Sources */,
-				2399F17F2A8A7BC600F04FD0 /* OneTimePassword+Hashable.swift in Sources */,
 				2399F1AE2A8A7FA200F04FD0 /* SimpleIcon.swift in Sources */,
-				2399F1842A8A7C0000F04FD0 /* CustomDialog.swift in Sources */,
 				2399F15D2A8A7AF500F04FD0 /* ContentView.swift in Sources */,
 				2399F15B2A8A7AF500F04FD0 /* TOTPApp.swift in Sources */,
-				234C9ED42A92341400BEA671 /* Color - Codable.swift in Sources */,
 				2399F1702A8A7B3D00F04FD0 /* AddView.swift in Sources */,
-				2399F18A2A8A7C1000F04FD0 /* loadDocument.swift in Sources */,
+				2399F18A2A8A7C1000F04FD0 /* Bundle - decode.swift in Sources */,
 				234C9ED22A92309600BEA671 /* Icon.swift in Sources */,
 				2399F1692A8A7B1600F04FD0 /* EditView.swift in Sources */,
 				2399F16D2A8A7B2700F04FD0 /* AdvancedSettingsView.swift in Sources */,
@@ -318,23 +312,25 @@
 				2399F1982A8A7C7200F04FD0 /* TOTP.swift in Sources */,
 				2399F17A2A8A7BAB00F04FD0 /* SettingsView.swift in Sources */,
 				2399F17D2A8A7BC100F04FD0 /* OneTimePassword.swift in Sources */,
-				234C9ED62A92368100BEA671 /* IconView.swift in Sources */,
 				2399F1782A8A7BA200F04FD0 /* OTPCodeView.swift in Sources */,
 				2399F1962A8A7C6E00F04FD0 /* OTPAlgorithm.swift in Sources */,
 				2399F1722A8A7B5F00F04FD0 /* AcknowledgementsView.swift in Sources */,
-				2399F1B02A8A834800F04FD0 /* Color - hex.swift in Sources */,
-				2399F16B2A8A7B2200F04FD0 /* Color-Theme.swift in Sources */,
+				2399F1B02A8A834800F04FD0 /* SVGColor - Colors.swift in Sources */,
 				2399F1752A8A7B7700F04FD0 /* OTPDetailView.swift in Sources */,
 				2399F1942A8A7C6A00F04FD0 /* HOTP.swift in Sources */,
 				2399F19A2A8A7C7700F04FD0 /* UInt64+Data.swift in Sources */,
+				23EA85E12A99070900997CEC /* SearchBarView.swift in Sources */,
+				23AF7E142A95338B00EFC8BB /* String - Identifable.swift in Sources */,
 				2399F1862A8A7C0400F04FD0 /* FileManager - documentsDirectory.swift in Sources */,
 				2399F1902A8A7C6300F04FD0 /* Data+Utilities.swift in Sources */,
+				23AF7E102A94E3C300EFC8BB /* Color - codeStroke.swift in Sources */,
 				2399F18C2A8A7C1500F04FD0 /* ThinGauge.swift in Sources */,
 				2399F19D2A8A7C8900F04FD0 /* Base32.swift in Sources */,
 				2399F1AC2A8A7E6C00F04FD0 /* IconSelectView.swift in Sources */,
 				2399F19F2A8A7C8C00F04FD0 /* StringExtension.swift in Sources */,
 				233EB5BB2A8B9FAB006AD9A8 /* SVGView - fill.swift in Sources */,
 				2399F1882A8A7C0B00F04FD0 /* InfoAlert .swift in Sources */,
+				23AF7E122A95314F00EFC8BB /* QRCodeScannerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -549,16 +545,16 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/twostraws/CodeScanner";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.3.0;
 			};
 		};
 		2399F1A32A8A7CD800F04FD0 /* XCRemoteSwiftPackageReference "FaviconFinder" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/will-lumley/FaviconFinder";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.1.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

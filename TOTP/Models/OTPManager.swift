@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CryptoKit
 
 class OTPManager: ObservableObject {
     @Published var timer = Timer.publish(every: 0.5, on: .main, in: .common).autoconnect()
@@ -15,9 +16,18 @@ class OTPManager: ObservableObject {
     
     static let shared = OTPManager()
     
+//    let symmetricKey = SymmetricKey(data: SHA256.hash(data: "testistest".dataUsingUTF8StringEncoding))
+    
     private init() {
         do {
-            passwords = try Bundle.main.loadDocument(from: path)
+//            let data = try Data(contentsOf: path)
+//            let sealedBox = try AES.GCM.SealedBox(combined: data)
+//            let decrypted = try AES.GCM.open(sealedBox, using: symmetricKey)
+//            print(String(data: decrypted, encoding: .utf8))
+//
+//            let decoder = JSONDecoder()
+//            passwords = try decoder.decode([OneTimePassword].self, from: decrypted)
+            passwords = try Bundle.main.decode([OneTimePassword].self, from: path)
         } catch {
             passwords = []
         }
@@ -25,10 +35,18 @@ class OTPManager: ObservableObject {
     
     func save() {
         do {
-            let encoded = try JSONEncoder().encode(passwords)
-            try encoded.write(to: path, options: [.atomic, .completeFileProtection])
+//            let encoder = JSONEncoder()
+//            encoder.outputFormatting = .withoutEscapingSlashes
+//            let encoded = try encoder.encode(passwords)
+//            if let encrypted = try AES.GCM.seal(encoded, using: symmetricKey).combined {
+//                try encrypted.write(to: path, options: [.atomic, .completeFileProtection])
+//            } else {
+//                throw DecodingError.dataCorrupted(.init(codingPath: [], debugDescription: ""))
+//            }
+            let data = try JSONEncoder().encode(passwords)
+            try data.write(to: path, options: [.completeFileProtection])
         } catch {
-            print("Unable to save data")
+            print("Unable to save data \n \(error)")
         }
     }
     
@@ -40,16 +58,5 @@ class OTPManager: ObservableObject {
         passwords.removeAll {
             $0.id == otp.id
         }
-    }
-    
-    static func genCodeWithDot(string: String, withSpaces: Bool = true) -> String {
-        let dotIndex = string.index(string.startIndex, offsetBy: string.count / 2) // Calculate index for dot insertion
-        var stringWithDot = string
-        if withSpaces {
-            stringWithDot.insert(contentsOf: " • ", at: dotIndex)
-        } else {
-            stringWithDot.insert("•", at: dotIndex)
-        }
-        return stringWithDot
     }
 }

@@ -18,42 +18,37 @@ struct OTPCodeView: View {
     @State private var editViewShowing = false
     
     var body: some View {
-        ZStack {
-            EmptyView()
-                .frame(maxWidth: .infinity, minHeight: 50)
-            HStack {
-                iconView
-                    .frame(width: 50, height: 50)
-                if otp.icon != nil {
-                    Divider()
-                }
-                VStack(alignment: .leading, spacing: 0) {
-                    Text(otp.accountName)
-                        .font(.body)
-                    HStack {
-                        Text(OTPString.prefix(OTPString.count / 2))
-                        Circle()
-                            .scaledToFit()
-                            .frame(width: 7.5)
-                        Text(OTPString.suffix(OTPString.count / 2))
-                    }
-                    .foregroundColor(.primary)
-                    .font(.system(size: 30, weight: .bold, design: .monospaced))
-                }
-                Spacer()
-                Gauge(value: Double(renewIn), in: 0...Double(otp.timeInterval)) {
-                    Text("\(renewIn)")
-                        .transaction { transaction in
-                            transaction.animation = nil
-                        }
-                }
-                .gaugeStyle(ThinGauge())
+        HStack {
+            otp.icon?.image
+                .fill(color: otp.icon?.iconColor ?? .black)
                 .frame(width: 50, height: 50)
-                .tint(renewIn > 5 ? .blue : .red)
+            if otp.icon != nil {
+                Divider()
             }
+            VStack(alignment: .leading, spacing: 0) {
+                Text(otp.accountName)
+                    .font(.body)
+                HStack {
+                    Text(OTPString.prefix(OTPString.count / 2))
+                    Circle()
+                        .scaledToFit()
+                        .frame(width: 7.5)
+                    Text(OTPString.suffix(OTPString.count / 2))
+                }
+                .foregroundColor(.primary)
+                .font(.system(size: 30, weight: .bold, design: .monospaced))
+            }
+            Spacer()
+            Gauge(value: Double(renewIn), in: 0...Double(otp.timeInterval)) {
+                Text("\(renewIn)")
+                    .transaction { transaction in
+                        transaction.animation = nil
+                    }
+            }
+            .gaugeStyle(ThinGauge())
+            .tint(renewIn > 5 ? .blue : .red)
         }
         .padding()
-        .background(.clear)
         .contextMenu {
             NavigationLink {
                 OTPDetailView(otp: otp)
@@ -77,19 +72,6 @@ struct OTPCodeView: View {
         }
     }
     
-    var iconView: SVGView? {
-        guard let slug = otp.icon?.slug else {
-            return nil
-        }
-        
-        guard let url = Bundle.main.url(forResource: slug, withExtension: "svg", subdirectory: "icons") else {
-            fatalError("Failed to load icon \(slug).svg")
-        }
-        
-        return SVGView(contentsOf: url)
-            .fill(color: otp.icon?.iconColor ?? .black)
-    }
-    
     func updateCode() {
         OTPString = otp.totp.generate(time: Date.now) ?? ""
         withAnimation(.default) { 
@@ -108,5 +90,6 @@ struct OTPView_Previews: PreviewProvider {
     static var previews: some View {
         OTPCodeView(otp: .example)
             .environmentObject(OTPManager.shared)
+            .padding()
     }
 }

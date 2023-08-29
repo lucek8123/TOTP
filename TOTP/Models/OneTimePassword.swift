@@ -33,7 +33,6 @@ class OneTimePassword: ObservableObject, Codable, Identifiable {
         case id
         case secret
         case accountName
-        case website
         case icon
         case digits
         case timeInterval
