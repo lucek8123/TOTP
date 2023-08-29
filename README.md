@@ -5,5 +5,6 @@ It is simple project and now it doesn't have file protection, and please **dont*
 To do:
  - [x] Icons
  - [ ] Use MVVM
+ - [ ] Custom icons
  - [ ] Password protection 
  - [ ] iCloud Sync (maybe in future)
