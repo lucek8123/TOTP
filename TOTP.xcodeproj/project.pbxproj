@@ -83,6 +83,7 @@
 		23AF7E0F2A94E3C300EFC8BB /* Color - codeStroke.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color - codeStroke.swift"; sourceTree = "<group>"; };
 		23AF7E112A95314F00EFC8BB /* QRCodeScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerView.swift; sourceTree = "<group>"; };
 		23AF7E132A95338B00EFC8BB /* String - Identifable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String - Identifable.swift"; sourceTree = "<group>"; };
+		23E2E53C2A9E785000009BED /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		23EA85E02A99070900997CEC /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,6 +113,7 @@
 		2399F14E2A8A7AF500F04FD0 = {
 			isa = PBXGroup;
 			children = (
+				23E2E53C2A9E785000009BED /* README.md */,
 				2399F1592A8A7AF500F04FD0 /* TOTP */,
 				2399F1582A8A7AF500F04FD0 /* Products */,
 			);
