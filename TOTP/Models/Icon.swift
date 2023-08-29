@@ -14,14 +14,14 @@ struct Icon: Codable {
     let iconColor: SVGColor
     
     enum CodingKeys: CodingKey {
-        case title, slug, iconColor
+        case title, slug, hex
     }
     
     func encode(to encoder: Encoder) throws {
         var encoder = encoder.container(keyedBy: CodingKeys.self)
         
         try encoder.encode(title, forKey: .title)
-        try encoder.encode(iconColor.value, forKey: .iconColor)
+        try encoder.encode(String(format: "%02X%02X%02X", iconColor.r, iconColor.g, iconColor.b), forKey: .hex)
         try encoder.encode(slug, forKey: .slug)
     }
     
@@ -52,11 +52,7 @@ struct Icon: Codable {
             slug = regex.stringByReplacingMatches(in: withoutSpecial, range: NSRange(location: 0, length: title.count), withTemplate: "").lowercased()
         }
         
-        do {
-            self.iconColor = SVGColor(hex: try container.decode(String.self, forKey: .iconColor) )
-        } catch DecodingError.typeMismatch {
-            self.iconColor = SVGColor(try container.decode(Int.self, forKey: .iconColor))
-        }
+        self.iconColor = SVGColor(hex: try container.decode(String.self, forKey: .hex) )
     }
     
     init(title: String, slug: String, iconColor: SVGColor) {
@@ -73,15 +69,4 @@ struct Icon: Codable {
         return SVGView(contentsOf: url)
     }
     
-    static var icons: [Icon] {
-        guard let url = Bundle.main.url(forResource: "simple-icons.json", withExtension: nil) else {
-            fatalError("Failed to locate simple-icons.json in bundle.")
-        }
-        
-        do {
-            return try Bundle.main.decode([Icon].self, from: url)
-        } catch {
-            fatalError("Failed to decode simple-icons.json - that should not happen. \n \(error.localizedDescription)")
-        }
-    }
 }

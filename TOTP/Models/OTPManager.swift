@@ -59,4 +59,16 @@ class OTPManager: ObservableObject {
             $0.id == otp.id
         }
     }
+    
+    static var icons: [Icon] {
+        guard let url = Bundle.main.url(forResource: "simple-icons.json", withExtension: nil) else {
+            fatalError("Failed to locate simple-icons.json in bundle.")
+        }
+        
+        do {
+            return try Bundle.main.decode([Icon].self, from: url)
+        } catch {
+            fatalError("Failed to decode simple-icons.json - that should not happen. \n \(error.localizedDescription)")
+        }
+    }
 }

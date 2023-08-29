@@ -55,7 +55,7 @@ struct IconSelectView: View {
                         ForEach(filtredIcons, id: \.slug) { icon in
                             VStack {
                                 icon.image
-                                    .fill(color: isDefaultIconColor ? .init(hex: icon.hex) : iconColor)
+                                    .fill(color: isDefaultIconColor ? icon.iconColor : iconColor)
                                     .frame(width: 64, height: 64)
                                 Text(icon.title)
                             }
@@ -69,7 +69,7 @@ struct IconSelectView: View {
                                         selectedIcon = nil
                                     } else {
                                         if isDefaultIconColor {
-                                            selectedIcon = Icon(title: icon.title, slug: icon.slug, iconColor: SVGColor(hex: icon.hex))
+                                            selectedIcon = Icon(title: icon.title, slug: icon.slug, iconColor: icon.iconColor)
                                         } else {
                                             selectedIcon = Icon(title: icon.title, slug: icon.slug, iconColor: iconColor)
                                         }
@@ -106,12 +106,12 @@ struct IconSelectView: View {
         }
     }
     
-    var filtredIcons: [SimpleIcon] {
+    var filtredIcons: [Icon] {
         if search.isEmpty {
-            return SimpleIcon.icons
+            return OTPManager.icons
         }
         
-        return SimpleIcon.icons.filter { icon in
+        return OTPManager.icons.filter { icon in
             icon.title.lowercased().hasPrefix(search.lowercased())
         }
     }

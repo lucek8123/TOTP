@@ -40,7 +40,6 @@
 		2399F1A22A8A7CAA00F04FD0 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 2399F1A12A8A7CAA00F04FD0 /* CodeScanner */; };
 		2399F1A52A8A7CD800F04FD0 /* FaviconFinder in Frameworks */ = {isa = PBXBuildFile; productRef = 2399F1A42A8A7CD800F04FD0 /* FaviconFinder */; };
 		2399F1AC2A8A7E6C00F04FD0 /* IconSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2399F1AB2A8A7E6C00F04FD0 /* IconSelectView.swift */; };
-		2399F1AE2A8A7FA200F04FD0 /* SimpleIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2399F1AD2A8A7FA200F04FD0 /* SimpleIcon.swift */; };
 		2399F1B02A8A834800F04FD0 /* SVGColor - Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2399F1AF2A8A834800F04FD0 /* SVGColor - Colors.swift */; };
 		23AF7E102A94E3C300EFC8BB /* Color - codeStroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AF7E0F2A94E3C300EFC8BB /* Color - codeStroke.swift */; };
 		23AF7E122A95314F00EFC8BB /* QRCodeScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AF7E112A95314F00EFC8BB /* QRCodeScannerView.swift */; };
@@ -80,7 +79,6 @@
 		2399F19C2A8A7C8900F04FD0 /* Base32.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base32.swift; sourceTree = "<group>"; };
 		2399F19E2A8A7C8C00F04FD0 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		2399F1AB2A8A7E6C00F04FD0 /* IconSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconSelectView.swift; sourceTree = "<group>"; };
-		2399F1AD2A8A7FA200F04FD0 /* SimpleIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleIcon.swift; sourceTree = "<group>"; };
 		2399F1AF2A8A834800F04FD0 /* SVGColor - Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SVGColor - Colors.swift"; sourceTree = "<group>"; };
 		23AF7E0F2A94E3C300EFC8BB /* Color - codeStroke.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color - codeStroke.swift"; sourceTree = "<group>"; };
 		23AF7E112A95314F00EFC8BB /* QRCodeScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerView.swift; sourceTree = "<group>"; };
@@ -173,7 +171,6 @@
 			children = (
 				2399F17C2A8A7BC100F04FD0 /* OneTimePassword.swift */,
 				2399F1802A8A7BCA00F04FD0 /* OTPManager.swift */,
-				2399F1AD2A8A7FA200F04FD0 /* SimpleIcon.swift */,
 				234C9ED12A92309600BEA671 /* Icon.swift */,
 			);
 			path = Models;
@@ -300,7 +297,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2399F1812A8A7BCA00F04FD0 /* OTPManager.swift in Sources */,
-				2399F1AE2A8A7FA200F04FD0 /* SimpleIcon.swift in Sources */,
 				2399F15D2A8A7AF500F04FD0 /* ContentView.swift in Sources */,
 				2399F15B2A8A7AF500F04FD0 /* TOTPApp.swift in Sources */,
 				2399F1702A8A7B3D00F04FD0 /* AddView.swift in Sources */,
